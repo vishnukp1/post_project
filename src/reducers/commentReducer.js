@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: [],
-}
+};
 
 export const commentSlice = createSlice({
-  name: 'comment',
+  name: "comment",
   initialState,
   reducers: {
     addcomment: (state, action) => {
@@ -18,19 +18,20 @@ export const commentSlice = createSlice({
     addreply: (state, action) => {
       const { postId, comment } = action.payload;
 
-      const post = state.value.find(post => post.id === postId);
+      const post = state.value.find((post) => post.id === postId);
       if (post) {
         post.replies.push(comment);
-      }else{
-        for(let i=0;i< state.value.length;i++){
-            const post = state.value[i].replies.find(post => post.id === postId);
-            post.replies.push(comment);
+      } else {
+        for (let i = 0; i < state.value.length; i++) {
+          const post = state.value[i].replies.find(
+            (post) => post.id === postId
+          );
+          post.replies.push(comment);
         }
-      
       }
     },
   },
-})
+});
 
 export const { addcomment, addreply } = commentSlice.actions;
 
