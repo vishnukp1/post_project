@@ -12,7 +12,7 @@ export const commentSlice = createSlice({
       state.value.push({
         id: action.payload.id,
         text: action.payload.text,
-        replies: [],
+        replies: [], 
       });
     },
     addreply: (state, action) => {
