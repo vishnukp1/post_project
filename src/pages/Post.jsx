@@ -32,18 +32,18 @@ const Post = () => {
   };
 
   return (
-    <div className="flex-col items w-96 mt-12 pt-5 bg-gray-400 rounded-lg">
-      <img src={POST} className="w-64 h-64 mb-5 ml-16 mt-2" alt="" />
+    <div className="flex-col items w-96 mt-12 pt-5 bg-gray-300 rounded-lg">
+      <img src={POST} className="w-64 h-64 mb-5 ml-16 mt-2 rounded-xl" alt="" />
 
       <form onSubmit={submitComment}>
         <input
           ref={commentRef}
-          className="bg-gray-200 appearance-none border-2 border-gray-500 rounded w-60 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          className="bg-gray-200 appearance-none border-2 border-blue-300 rounded w-60 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-400"
           name="comment"
           type="text"
         />
         <button
-          className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          className="shadow bg-purple-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
           type="submit"
         >
           Add Comment
