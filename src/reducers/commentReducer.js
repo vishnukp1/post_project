@@ -31,8 +31,12 @@ export const commentSlice = createSlice({
       }
     },
   },
+  deletePost: (state, action) =>{
+    state.value = state.value.filter((item) => item.id !== action.payload);
+  
+  }
 });
 
-export const { addcomment, addreply } = commentSlice.actions;
+export const { addcomment, addreply ,deletePost} = commentSlice.actions;
 
 export default commentSlice.reducer;

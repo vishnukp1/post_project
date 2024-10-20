@@ -78,12 +78,12 @@ const Post = () => {
                     <form onSubmit={(e) => submitReply(e, reply.id)}>
                       <input
                         ref={(el) => (inputRef.current[reply.id] = el)}
-                        className="bg-gray-200 appearance-none border-2 border-gray-500 rounded w-44 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                        className="bg-gray-200 appearance-none border-2 border-gray-300 rounded w-44 py-2 px-4 text-gray-500 leading-tight focus:outline-none focus:bg-white focus:border-purple-400"
                         name="reply"
                         type="text"
                       />
                       <button
-                        className="shadow bg-blue-300 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                        className="shadow bg-green-400 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                         type="submit"
                       >
                         Add Reply
